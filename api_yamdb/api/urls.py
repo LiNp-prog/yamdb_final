@@ -1,8 +1,8 @@
-from django.urls import include, path
-from rest_framework.routers import DefaultRouter, SimpleRouter
 from api.views import (AdminViewSet, APIGetJWTToken, APIUserData,
                        APIUserRegistration, CategoryViewSet, CommentViewSet,
                        GenreViewSet, ReviewViewSet, TitleViewSet)
+from django.urls import include, path
+from rest_framework.routers import DefaultRouter, SimpleRouter
 
 router_v1 = SimpleRouter()
 router = DefaultRouter()
