@@ -1,3 +1,4 @@
+from api_yamdb.settings import EMAIL_HOST_USER
 from api.filters import TitleFilter
 from api.permissions import IsAdmin, IsAdminOrReadOnly, IsAuthorOrAdminOrModer
 from api.serializers import (AdminActionsSerializer, CategorySerializer,
@@ -18,9 +19,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import GenericViewSet
 from rest_framework_simplejwt.tokens import AccessToken
-from api_yamdb.settings import EMAIL_HOST_USER
 from reviews.models import Category, Genre, Review, Title
 from users.models import User
+
 
 class CategoryViewSet(CreateModelMixin, ListModelMixin,
                       DestroyModelMixin, GenericViewSet):
