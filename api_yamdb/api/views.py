@@ -22,6 +22,8 @@ from rest_framework.views import APIView
 from rest_framework.viewsets import GenericViewSet
 from rest_framework_simplejwt.tokens import AccessToken
 
+
+
 class CategoryViewSet(CreateModelMixin, ListModelMixin,
                       DestroyModelMixin, GenericViewSet):
     queryset = Category.objects.all()
