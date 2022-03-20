@@ -1,29 +1,27 @@
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
-from django.shortcuts import get_object_or_404
 from django.db.models import Avg
+from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, permissions, status, viewsets
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from rest_framework_simplejwt.tokens import AccessToken
 from rest_framework.filters import SearchFilter
 from rest_framework.mixins import (CreateModelMixin, DestroyModelMixin,
                                    ListModelMixin)
+from rest_framework.response import Response
+from rest_framework.views import APIView
 from rest_framework.viewsets import GenericViewSet
+from rest_framework_simplejwt.tokens import AccessToken
 
 from api.filters import TitleFilter
-from api.serializers import (CategorySerializer, GenreSerializer,
-                             TitleReadSerializer, TitleSerializer,
-                             AdminActionsSerializer, GetTokenSerializer,
-                             RegistrationSerializer, UserDataSerializer,
-                             ReviewSerializer, CommentSerializer)
-from api.permissions import IsAdminOrReadOnly, IsAdmin, IsAuthorOrAdminOrModer
+from api.permissions import IsAdmin, IsAdminOrReadOnly, IsAuthorOrAdminOrModer
+from api.serializers import (AdminActionsSerializer, CategorySerializer,
+                             CommentSerializer, GenreSerializer,
+                             GetTokenSerializer, RegistrationSerializer,
+                             ReviewSerializer, TitleReadSerializer,
+                             TitleSerializer, UserDataSerializer)
 from api_yamdb.settings import EMAIL_HOST_USER
+from reviews.models import Category, Genre, Review, Title
 from users.models import User
-
-
-from reviews.models import Category, Genre, Title, Review
 
 
 class CategoryViewSet(CreateModelMixin, ListModelMixin,
