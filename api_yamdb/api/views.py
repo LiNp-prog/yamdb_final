@@ -1,4 +1,3 @@
-from api_yamdb.settings import EMAIL_HOST_USER
 from api.filters import TitleFilter
 from api.permissions import IsAdmin, IsAdminOrReadOnly, IsAuthorOrAdminOrModer
 from api.serializers import (AdminActionsSerializer, CategorySerializer,
@@ -6,6 +5,8 @@ from api.serializers import (AdminActionsSerializer, CategorySerializer,
                              GetTokenSerializer, RegistrationSerializer,
                              ReviewSerializer, TitleReadSerializer,
                              TitleSerializer, UserDataSerializer)
+from api_yamdb.settings import EMAIL_HOST_USER
+
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.db.models import Avg
