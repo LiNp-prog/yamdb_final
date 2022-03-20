@@ -1,5 +1,4 @@
-[![Django and Flake8 tests](https://github.com/LiNp-prog/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)]
-[![Build and Deploy](https://github.com/LiNp-prog/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)]
+![workflow status](https://github.com/LiNp-prog/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ### Описание проекта:
 
