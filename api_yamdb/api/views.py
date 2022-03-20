@@ -1,4 +1,10 @@
-from api_yamdb.settings import EMAIL_HOST_USER
+from api.filters import TitleFilter
+from api.permissions import IsAdmin, IsAdminOrReadOnly, IsAuthorOrAdminOrModer
+from api.serializers import (AdminActionsSerializer, CategorySerializer,
+                             CommentSerializer, GenreSerializer,
+                             GetTokenSerializer, RegistrationSerializer,
+                             ReviewSerializer, TitleReadSerializer,
+                             TitleSerializer, UserDataSerializer)
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.db.models import Avg
@@ -15,13 +21,7 @@ from rest_framework_simplejwt.tokens import AccessToken
 from reviews.models import Category, Genre, Review, Title
 from users.models import User
 
-from api.filters import TitleFilter
-from api.permissions import IsAdmin, IsAdminOrReadOnly, IsAuthorOrAdminOrModer
-from api.serializers import (AdminActionsSerializer, CategorySerializer,
-                             CommentSerializer, GenreSerializer,
-                             GetTokenSerializer, RegistrationSerializer,
-                             ReviewSerializer, TitleReadSerializer,
-                             TitleSerializer, UserDataSerializer)
+from api_yamdb.settings import EMAIL_HOST_USER
 
 
 class CategoryViewSet(CreateModelMixin, ListModelMixin,
