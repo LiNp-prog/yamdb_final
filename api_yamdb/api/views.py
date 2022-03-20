@@ -11,7 +11,6 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import GenericViewSet
 from rest_framework_simplejwt.tokens import AccessToken
-
 from api.filters import TitleFilter
 from api.permissions import IsAdmin, IsAdminOrReadOnly, IsAuthorOrAdminOrModer
 from api.serializers import (AdminActionsSerializer, CategorySerializer,
