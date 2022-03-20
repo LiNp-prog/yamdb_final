@@ -1,3 +1,6 @@
+![Django and Flake8 tests](https://github.com/LiNp-prog/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![Build and Deploy](https://github.com/LiNp-prog/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 ### Описание проекта:
 
 Командный проект api_yamdb представляет из себя бэкэнд и api сервиса по публикации произведений с возможностью их оценивания.
