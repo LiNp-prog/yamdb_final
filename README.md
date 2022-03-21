@@ -49,3 +49,8 @@ EMAIL_PASSWORD=password #your email password
 Заполните базу данными
     docker-compose exec web python manage.py loaddata fixtures.json
 ```
+
+#### Адрес сервера
+```
+178.154.196.237
+```
